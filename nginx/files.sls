@@ -11,6 +11,7 @@
     - user: root
     - group: root
     - mode: 644
+    - source: salt://nginx/html-sites/index.html
 
 /var/www/error:
   file.directory:
@@ -23,14 +24,9 @@
     - user: root
     - group: root
     - mode: 644
+    - - source: salt://nginx/html-sites/custom_404.html
 
-/var/log/nginx/example:
-  file.directory:
-    - user: root
-    - group: root
-    - mode: 755
-
-/var/log/nginx/localhost:
+/var/log/nginx:
   file.directory:
     - user: root
     - group: root
@@ -41,9 +37,11 @@
     - user: root
     - group: root
     - mode: 644
+    - source: salt://nginx/html-sites/www_example_com
 
-/etc/nginx/nginx.conf:
+/etc/nginx/sites-enabled/default:
   file.managed:
     - user: root
     - group: root
     - mode: 644
+    - source: salt://nginx/html-sites/default_site
