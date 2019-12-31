@@ -1,0 +1,16 @@
+  
+server {
+  listen 3200;
+  listen [::]:3200;
+
+  location / {
+    return 404;
+  }
+
+  error_page 404 /custom_404.html;
+
+  error_page 404 /custom_404.html;
+  location = /custom_404.html {
+    root /var/www/error;
+  }
+}
