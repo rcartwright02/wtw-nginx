@@ -24,13 +24,7 @@
     - user: root
     - group: root
     - mode: 644
-    - - source: salt://nginx/html-sites/custom_404.html
-
-/var/log/nginx:
-  file.directory:
-    - user: root
-    - group: root
-    - mode: 755
+    - source: salt://nginx/html-sites/custom_404.html
 
 /etc/nginx/sites-enabled/www_example_com:
   file.managed:
