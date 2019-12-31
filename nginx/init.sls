@@ -5,7 +5,6 @@ nginx:
     - reload: True
     - watch:
       - pkg: nginx
-      - file: /etc/nginx/sites-available/*
-      - file: /etc/nginx/nginx.conf
+      - file: /etc/nginx/*
     - require:
       - pkg: nginx
