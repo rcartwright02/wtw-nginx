@@ -39,3 +39,10 @@
     - group: root
     - mode: 644
     - source: salt://nginx/html-sites/default_site
+
+/etc/nginx/nginx.conf:
+  file.managed:
+    - user: root
+    - group: root
+    - mode: 644
+    - source: salt://nginx/html-sites/nginx.conf
